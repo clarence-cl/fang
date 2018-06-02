@@ -1,0 +1,20 @@
+<!--pages/opusClass/opusClass.wxml-->
+<view class='container'>
+<view class='banner0'></view>
+  <view class='banner' style="background:url('{{imgurl}}');background-size:100%;"></view>
+  <view class='content'>
+    <view class="list" wx:for="{{classData}}" wx:key="{{index}}" id="{{item.id}}" bindtap='toshowCase'>
+      <text style='color:#333;'>{{index+1<10?"0"+(index+1):index+1}}.</text>
+      <view class='rbox'>
+        <label>
+          <text>{{item.title}}</text>
+          <text>{{item.count}}人已读</text>
+        </label>
+        <view class='author'>
+          {{item.author}}
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class="foot" wx:if="{{onoff}}">我也是有底线的</view>
+</view>

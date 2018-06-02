@@ -1,0 +1,110 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx6283fcfad3175dcb",
+	"projectname": "fy",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "fy",
+					"pathName": "pages/ranking/ranking",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "showcase",
+					"pathName": "pages/showcase/showcase",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "作品",
+					"pathName": "pages/production/production",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "录制",
+					"pathName": "pages/recording/recording",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "opus",
+					"pathName": "pages/opus/opus",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "诗词大全",
+					"pathName": "pages/peotryClass/peotryClass",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "作品分类",
+					"pathName": "pages/opusClass/opusClass",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "首页作品分类",
+					"pathName": "pages/productionClass/productionClass",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地区",
+					"pathName": "pages/region/region",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "图片",
+					"pathName": "pages/preserve/preserve",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+<view class='container'>
+<view style='height:30rpx;'></view>
+<scroll-view id='scrollview' scroll-x style='width:100vw;height:840rpx;' scroll-left="{{scrollLeft}}"
+scroll-with-animation="true" catchtouchstart='handleTouchStart' catchtouchend='handleTouchEnd'>
+<view class='box' style="width:{{scrollviewWidth}}px;" wx:for="{{list}}" wx:key="index" bindtap='toinfo' data-peotryid='{{item.poetry.id}}' id="{{item.id}}">
+<image class='picture' src="{{item.user.head_pic}}"></image>
+<view class="info">
+<view class='fullName'>{{item.user.name}}</view>
+<view class='synopsis'>{{item.user.detail}}</view>
+</view>
+<view class='peotry'>
+<view class='peotryTitle'><image src="../../assets/images/play.png"></image>{{item.poetry.title}}-{{item.poetry.author}}</view>
+<view class='listensNum'>-{{item.play_count}}人听过-</view>
+</view>
+</view>
+</scroll-view>
+<!-- <view class='scrollview' id='scrollview'>
+<view class='box' style="width:{{scrollviewWidth}}px;" wx:for="{{list}}" wx:key="index"></view>
+</view> -->
+<view class="flex-h flex-center">
+<view bindtap='go' class="dot {{scrollviewIndex==index?'active':''}}" wx:for="{{list}}" wx:key="index" data-index="{{index}}"></view>
+</view>
+<image class='bg' mode='widthFix' src='../../assets/images/bg.png'></image>
+</view>

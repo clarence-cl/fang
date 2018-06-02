@@ -1,0 +1,98 @@
+scroll-view {
+  height: 700rpx;
+  white-space: nowrap;
+}
+
+.box {
+  background: #fff;
+  height: 840rpx;
+  display: inline-block;
+  margin: 0 15rpx;
+}
+
+.box:first-child {
+  margin-left: 45rpx;
+}
+
+.box:last-child {
+  margin-right: 45rpx;
+}
+
+.scrollview {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 710rpx;
+  white-space: nowrap;
+  width: 100vw;
+  /* -webkit-overflow-scrolling: touch; */
+}
+
+.active {
+  background-color: #e4ba79 !important;
+}
+
+.flex-h {
+  height: 150rpx;
+  padding-top: 50rpx;
+}
+.bg{
+  width: 750rpx;
+  height: 130rpx;
+  position: absolute;
+  bottom: 0;
+  /* z-index:-1; */
+}
+.dot {
+  display: flex;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: #C3C3C3;
+  z-index: 999;
+  margin: 0 10rpx;
+}
+
+.picture {
+  width: 388rpx;
+  height: 388rpx;
+  margin: 92rpx 128rpx 0 128rpx;
+}
+.info {
+  margin: 48rpx 0 70rpx 0;
+  text-align: center;
+}
+
+.fullName {
+  color: #000;
+  font-size: 41rpx;
+  margin-bottom: 20rpx;
+}
+
+.synopsis, .listensNum {
+  font-size: 27rpx;
+  color: #aaa;
+}
+
+.peotry {
+  text-align: center;
+}
+
+.peotryTitle {
+  color: #e4ba79;
+  font-size: 33rpx;
+  width: 95%;
+  overflow: hidden;
+  margin:0 auto;
+  padding:0 5rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.peotryTitle image{
+  width: 15rpx;
+  height: 18rpx;
+  margin-right:10rpx;
+
+}
+.listensNum {
+  margin-top: 20rpx;
+}

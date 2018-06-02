@@ -1,0 +1,85 @@
+<!--pages/productionClass/productionClass.wxml-->
+<!--pages/opusClass/opusClass.wxml-->
+<view class='container'>
+ <view class='banner0'></view>
+  <view class='banner' regionId="{{proid}}"  style='background:url("{{imgurl}}") 0 0 no-repeat;background-size: 100%;'></view>
+  <view class='content'>
+    <!-- 最新上传 -->
+    <view class="list" wx:if="{{proid==0}}" wx:for="{{collectionData}}" wx:key="{{index}}" data-audioid="{{item.id}}" id="{{item.poetry.id}}" bindtap='topeotry'>
+      <image src='{{item.user.head_pic}}'></image>
+      <view class='rbox'>
+        <label>
+          <text class='peotrytitle'>{{item.poetry.title}}</text>
+          <text>{{item.poetry.author}}</text>
+        </label>
+        <view class='author'>
+          <text>{{item.col_count}}<text class='fa fa-heart-o'></text></text>
+          <text>{{item.province}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 历史热门 -->
+    <view class="list history" wx:if="{{proid==1}}" wx:for="{{collectionData}}" wx:key="{{index}}" data-audioid="{{item.id}}" id="{{item.poetry.id}}" bindtap='topeotry'>
+      <text class='historyIdex'>{{index+1<10?"0"+(index+1):index+1}}.</text>
+      <image src='{{item.user.head_pic}}'></image>
+      <view class='rbox'>
+        <label>
+          <text class='peotrytitle'>{{item.poetry.title}}</text>
+          <text>{{item.poetry.author}}</text>
+        </label>
+        <text class='fa fa-heart-o'></text>
+        <view class='author'>
+          <view><text>{{item.col_count}}</text></view>
+          <text>{{item.province}}</text>
+        </view>
+         
+      </view>
+    </view>
+    <!-- 每日热门 -->
+    <view class='recommendCon' wx:if="{{proid==2}}" wx:for="{{collectionData}}" wx:key="{{index}}">
+      <view class='time'>
+        <text class='fa fa-minus fa-rotate-90'></text> {{index}}
+      </view>
+      <view class="list recommend" wx:for="{{item}}" wx:key="{{index}}" data-audioid="{{item.id}}"  id="{{item.poetry.id}}"  bindtap='topeotry'>
+        <image src='{{item.user.head_pic}}'></image>
+        <text class='authorName'>{{item.user.name}}</text>
+        <view class='box'>
+          <label>
+            <text class='peotrytitle'>{{item.poetry.title}}</text>
+            <text>{{item.poetry.author}}</text>
+          </label>
+        </view>
+      </view>
+
+    </view>
+    <!-- 我的收藏 -->
+    <view class="list history" wx:if="{{proid==4}}" wx:for="{{collectionData}}" wx:key="{{index}}" data-audioid="{{item.id}}" id="{{item.poetry.id}}" bindtap='topeotry'>
+      <text class='historyIdex'>{{index+1<10?"0"+(index+1):index+1}}.</text>
+      <image src='{{item.user.head_pic}}'></image>
+      <view class='rbox'>
+        <label>
+          <text class='peotrytitle'>{{item.poetry.title}}</text>
+          <text>{{item.poetry.author}}</text>
+        </label>
+        <view class='author'>
+          <text>{{item.col_count}}<text class='fa fa-heart-o'></text></text>
+          <text>{{item.province}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 我的作品 -->
+    <view class="list collection" wx:if="{{proid==5}}" wx:for="{{collectionData}}" wx:key="{{index}}" data-provinceId='{{item.province_id}}' data-audioid="{{item.id}}" id="{{item.poetry.id}}" bindtap='toopus'>
+      <text class='collectIndex'>{{index+1<10?"0"+(index+1):index+1}}.</text>
+      <view class='rbox'>
+        <label>
+          <text class='peotrytitle'>{{item.poetry.title}}</text>
+          <text>{{item.poetry.author}}</text>
+        </label>
+        <view class='author'>
+          <text>{{item.play_count}}<text class='fa fa-heart-o'></text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='foot' wx:if="{{onoff}}">我也是有底线的</view>
+</view>

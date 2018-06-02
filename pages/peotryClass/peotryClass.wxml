@@ -1,0 +1,7 @@
+<!--pages/peotryClass/peotryClass.wxml-->
+<view class='container'>
+   <view class='classify' wx:for="{{peotryClass}}" style='background:url("{{item.bgimg}}");background-size:100%;' wx:key="{{index}}" id="{{index}}" data-title="{{item.type}}" data-imgurl="{{item.bgimg}}" bindtap='toOpusClass'>
+    <view class='classifyName'></view>
+    <view class='clasifyNum'>-{{item.count}}-</view>
+   </view>
+</view>

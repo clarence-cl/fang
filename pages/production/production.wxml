@@ -1,0 +1,13 @@
+<!--pages/production/production.wxml-->
+<view class='container'>
+  <swiper indicator-dots="{{indicatorDots}}" indicator-color="#D2D2D2" indicator-active-color="#EEC585" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+       <image bindtap='toinfo'  src="{{item.img}}" data-audioid="{{item.page}}" class="slide-image" width="375" height="150" mode='widthFix' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='content'>
+    <view wx:for="{{proClass}}" wx:key="{{index}}" id="{{item.id}}" bindtap='toproductionClass' data-title="{{item.name}}">{{item.name}}</view>
+  </view>
+</view>

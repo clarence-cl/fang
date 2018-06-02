@@ -1,0 +1,8 @@
+<!--pages/region/region.wxml-->
+<view class="container">
+  <image lazy-load="true" mode='widthFix' src='../../assets/images/load.gif'></image>
+  <text class='loading'>{{ msg }}</text>
+  <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindtap='a' bindgetuserinfo="agreeGetUser" lang="zh_CN">登陆</button>
+    </view>
+</view>

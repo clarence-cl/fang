@@ -1,0 +1,142 @@
+/* pages/ranking/ranking.wxss */
+
+.top {
+  width: 615rpx;
+  height: 310rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  background: url(http://fangyansici.oss-cn-shenzhen.aliyuncs.com/18-4-9/49934017.jpg) 0 20rpx no-repeat;
+  background-size: 100%;
+}
+
+/* .top image {
+  width: 210rpx;
+  height: 310rpx;
+}
+.first .bg{
+  position: absolute;
+  z-index: 1;
+}
+.second .bg {
+  height: 236rpx;
+  position: absolute;
+  bottom: 0;
+}
+
+.third .bg {
+  height: 210rpx;
+  position: absolute;
+  bottom: 0;
+  left: -10rpx;
+} */
+
+.ranking{
+  width: 210rpx;
+  height: 100%;
+  position: relative;
+}
+
+.top .ranking:nth-child(1) .num {
+  bottom: 45rpx;
+}
+
+.top .ranking:nth-child(2) .num {
+  bottom: 75rpx;
+}
+
+.top .ranking:nth-child(3) .num {
+  bottom: 25rpx;
+}
+.fa{
+  margin-right: 5rpx;
+}
+.num {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.num text {
+  color: #fff;
+}
+
+.num view {
+  color: #fff;
+  font-size: 33rpx;
+  margin-bottom: 5rpx;
+}
+
+ .address image {
+  width: 25rpx;
+  height: 20rpx;
+  margin-right: 5rpx;
+}
+.address {
+  color: #f25e47;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.address text {
+  color: #ec9a8d;
+  font-size: 30rpx;
+}
+.toplist {
+  width: 615rpx;
+  margin: 30rpx auto 0 auto;
+  height:545rpx;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.peoNum {
+  height: 10rpx;
+  background: #f25e47;
+  margin-top: 10rpx;
+}
+
+.box {
+  margin-bottom: 30rpx;
+}
+
+.share image {
+  width: 25rpx;
+  height: 30rpx;
+}
+
+.share {
+  width: 615rpx;
+  height: 104rpx;
+  background: #fe5c38;
+  margin: 40rpx auto 20rpx auto;
+  border-radius: 50rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 104rpx;
+  font-size: 30rpx;
+}
+
+.careful {
+  color: #a9a9a9;
+  font-size: 22rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+button {
+  width: 600rpx;
+  height: 100rpx;
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow: hidden;
+  background: #fe5c38;
+  margin: 0;
+  border-radius: 50rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 104rpx;
+  font-size: 30rpx;
+}

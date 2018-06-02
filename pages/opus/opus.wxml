@@ -1,0 +1,42 @@
+<!--pages/opus/opus.wxml-->
+<view class='container'>
+  <view class='content' style='background-image: url({{showcaseData.back_i_url}})'>
+    <view class='peotry'>
+      <view class='peotrytil'>{{showcaseData.poetry.title}}</view>
+      <view class='author'>- {{showcaseData.poetry.author}} -</view>
+      <view class='peotrycon'>
+         <view wx:for="{{peotryCon}}" wx:key="{{index}}">{{item}}</view>
+      </view>
+    </view>
+    <view class='audioinfo flex-h flex-around'>
+      <view class='readerinfo'>
+        <image class='headpic' src='{{showcaseData.user.head_pic}}'></image>
+        <view class='rbox flex-v flex-between'>
+          <view class='readername'>
+            {{showcaseData.user.name}}
+          </view>
+          <view class='readerlan'>
+            <text>{{showcaseData.province}}</text>话朗读</view>
+        </view>
+      </view>
+      <view class='time flex-h flex-between-center' bindtap='onplay'>
+         <view class='fa fa-pause'  wx:if="{{!play}}"></view> 
+        <image src='../../assets/images/voice.png' wx:if="{{play}}"></image>
+        <audio src="{{musicPath}}" id="myAudio"></audio>
+        <view>{{time}}″</view>
+      </view>
+
+    </view>
+  </view>
+  <view class='btn flex-h flex-around'>
+    <view class='flex-center' bindtap='toranking'>
+      <image src="../../assets/images/ph_full.png" ></image> 排行榜</view>
+    <view class='flex-center' bindtap='picture'>
+      <image src="../../assets/images/sc.png"></image>生成</view>
+    <view class='flex-center'>
+      <button hover-class="none" open-type="share">
+      <image src="../../assets/images/share_y.png"></image>分享
+      </button>
+      </view>
+  </view>
+</view>

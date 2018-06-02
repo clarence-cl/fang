@@ -1,0 +1,4 @@
+<view class='container'>
+<image mode="aspectFill" src="{{imageSrc}}"></image>
+<view class='btn' bindtap='preserve'>保存</view>
+</view>

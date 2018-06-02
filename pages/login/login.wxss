@@ -1,0 +1,19 @@
+/* pages/region/region.wxss */
+.container {
+  background: #fff;
+  text-align: center;
+  padding-top: 80rpx;
+  box-sizing: border-box;
+}
+
+image {
+  width: 80vw;
+}
+
+.loading {
+  position: absolute;
+  bottom: 150rpx;
+  color: #666;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

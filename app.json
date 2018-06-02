@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ranking/ranking",
+    "pages/production/production",
+    "pages/recording/recording",
+    "pages/showcase/showcase",
+    "pages/opus/opus",
+    "pages/peotryClass/peotryClass",
+    "pages/opusClass/opusClass",
+    "pages/productionClass/productionClass",
+    "pages/region/region",
+    "pages/preserve/preserve"
+  ],
+  "window": {
+    "backgroundTextStyle": "#ffffff",
+    "navigationBarBackgroundColor": "#F0F0F0",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#E7C289",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "assets/images/tj.png",
+        "selectedIconPath": "assets/images/tj_full.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "排行榜",
+        "iconPath": "assets/images/ph.png",
+        "selectedIconPath": "assets/images/ph_full.png"
+      },
+      {
+        "pagePath": "pages/production/production",
+        "text": "作品",
+        "iconPath": "assets/images/zp.png",
+        "selectedIconPath": "assets/images/zp_full.png"
+      }
+    ]
+  }
+}

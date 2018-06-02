@@ -1,0 +1,199 @@
+.container {
+  overflow: hidden;
+  height: 680rpx;
+  width: 750rpx;
+}
+
+.content {
+  width: 638rpx;
+  height: 859rpx;
+  margin: 0 auto 0 auto;
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding-top: 130rpx;
+}
+
+.peotry {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.peotrytil {
+  margin: 0 0 35rpx 0;
+  color: #000;
+  font-size: 40rpx;
+}
+
+.author {
+  color: #888;
+  font-size: 25rpx;
+  margin-bottom: 35rpx;
+}
+
+.peotrycon view {
+  color: #000;
+  font-size: 35rpx;
+}
+
+.peotrycon {
+  height: 370rpx;
+  overflow: auto;
+}
+
+.peotrycon::-webkit-scrollbar {
+  width: 10rpx;
+}
+
+/* 滚动条两端的按钮 */
+
+.peotrycon::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 外层轨道 */
+
+.peotrycon::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 滚动条里面可以拖动的那部分 */
+
+.content::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 4rpx;
+}
+
+/* 边角 */
+
+.content::-webkit-scrollbar-corner {
+  background: #fff;
+}
+
+.readerinfo {
+  display: flex;
+  flex-direction: row;
+  width: 94%;
+  margin: 40rpx auto;
+  padding-left: 35rpx;
+}
+
+.headpic {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.readername {
+  color: #222;
+  font-size: 30rpx;
+}
+
+.readerlan {
+  color: #aaa;
+}
+.readerlan text{
+  color: red;
+}
+.readername text {
+  color: #999;
+  font-size: 25rpx;
+}
+.rbox {
+  margin-left: 20rpx;
+}
+
+.time {
+  width: 220rpx;
+  height: 95rpx;
+  border: 3rpx solid #f7c679;
+  border-radius: 50rpx;
+  line-height: 95rpx;
+  padding: 0 40rpx;
+}
+.time image{
+  width: 30rpx;
+  height: 35rpx;
+}
+.audioinfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-pause, .fa-play {
+  color: #eec585;
+}
+
+.fa-heart, .fa-heart-o {
+  color: #ef9191;
+}
+
+.follow {
+  width: 203rpx;
+  height: 95rpx;
+  border: 3rpx solid #CCCCCC;
+  border-radius: 50rpx;
+}
+.follow text{
+  margin-right: 10rpx;
+}
+.btn {
+  margin: 0rpx auto 0 auto;
+  width: 638rpx;
+  height: 230rpx;
+}
+
+.btn image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.btn view:nth-child(2) {
+  background: #f2cc8f;
+  color: #b17b28;
+}
+
+.fa-microphone {
+  color: #b17b28;
+}
+
+.fa-align-left {
+  color: #f4dab2;
+}
+
+.btn view {
+  width: 185rpx;
+  height: 95rpx;
+  border-radius: 50rpx;
+  font-size: 33rpx;
+  text-align: center;
+  line-height: 95rpx;
+  background: #fff;
+  color: #f4dab2;
+}
+button{
+position:relative;
+display:block;
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+font-size:35rpx;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+border-radius:5px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color: #f4dab2;
+background-color:#fff;
+font-weight: bold;
+}
+.btn view:nth-child(2){
+  width: 216rpx;
+}
+.btn view:nth-child(1){
+  font-weight: bold;
+}
+.flex-center{
+ font-size: 35rpx;
+}

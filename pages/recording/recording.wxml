@@ -1,0 +1,67 @@
+<!--pages/recording/recording.wxml-->
+<view class='container'>
+  <view class='content' style='background-image: url({{recordData.back_i_url}});'>
+    <view class='peotry'>
+      <view class='peotrytil'>{{recordData.poetry.title}}</view>
+      <view class='author'>- {{recordData.poetry.author}} -</view>
+      <view class='peotrycon'>
+        <view wx:for="{{peotryCon}}" wx:key="{{index}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='btn flex-h flex-around' wx:if='{{!onshow&&!releaseSwitch}}'>
+    <view class='flex-center' bindtap='remake'>重录</view>
+    <view class='audition'>
+      <view bindtap='audition'>
+        <label class='fa {{auditionSwitch?"fa-play":"fa-pause"}} fa-lg'></label>
+      </view>
+      <text wx:if="{{auditionsTimeSwitch}}">试听</text>
+      <text wx:if="{{!auditionsTimeSwitch}}">00:{{auditionsTime<10?"0"+(auditionsTime):auditionsTime}}</text>
+    </view>
+    <view class='flex-center' bindtap='release'>发布</view>
+  </view>
+
+  <view class='btn1' wx:if='{{onshow&&!releaseSwitch}}'>
+    <view class='recording' bindtap='recording'>
+      <text class='fa {{onoff?"fa-microphone":"fa-stop"}}  fa-lg'></text>
+    </view>
+    <text class='careful'>{{careful}}</text>
+
+    <view class="circleProgress_wrapper" wx:if="{{!onoff}}" bindtap='recording'>
+      <view class="wrapper right">
+        <view class="circleProgress rightcircle"></view>
+      </view>
+      <view class="wrapper left">
+        <view class="circleProgress leftcircle"></view>
+      </view>
+    </view>
+  </view>
+  <view class='btn2'>
+    <view class='progress'>
+      <view class='inprogress {{proWidth==0?"inprogress_width":""}}' style='width:{{proWidth}}' ></view>
+    </view>
+    <text>上传合成中，请耐心等待</text>
+  </view>
+</view>
+<view class='region' wx:if="{{regionSwitch}}">
+  <view class='refiontil'>请选择你的地区</view>
+  <view class='province'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"        indicator-color="#D5D5D5" indicator-active-color="#E3BA78">
+      <block wx:for="{{provinceList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class='list {{regionId==item.id?"choice":""}}' wx:for="{{provinceList[index]}}" wx:key="{{index}}" id='{{item.id}}' bindtap='regionChoice'>{{item.name}}</view>
+          <!-- <view class='null'></view> -->
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='option'>
+      <text bindtap='ensure'>确定</text>
+      <text bindtap='cancel'>取消</text>
+    </view>
+  </view>
+</view>
+<view class='countDown' wx:if="{{tconoff}}">
+<div class="cell">  
+  <div class="num">3 2 1</div>  
+</div> 
+</view>

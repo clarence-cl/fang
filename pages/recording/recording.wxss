@@ -1,0 +1,438 @@
+/* pages/recording/recording.wxss */
+
+.container {
+  overflow: hidden;
+  height: 680rpx;
+}
+
+.content {
+  width: 638rpx;
+  height: 710rpx;
+  margin: 0 auto 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 130rpx;
+}
+
+.peotry {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.peotrytil {
+  margin: 0 0 35rpx 0;
+  color: #000;
+  font-size: 40rpx;
+}
+
+.author {
+  color: #888;
+  font-size: 25rpx;
+  margin-bottom: 35rpx;
+}
+
+.peotrycon view {
+  color: #000;
+  font-size: 35rpx;
+}
+
+.peotrycon {
+  height: 370rpx;
+  overflow: auto;
+}
+
+.peotrycon::-webkit-scrollbar {
+  width: 10rpx;
+}
+
+/* 滚动条两端的按钮 */
+
+.peotrycon::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 外层轨道 */
+
+.peotrycon::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 滚动条里面可以拖动的那部分 */
+
+.content::-webkit-scrollbar-thumb {
+  background: #838384;
+  border-radius: 4rpx;
+}
+
+/* 边角 */
+
+.content::-webkit-scrollbar-corner {
+  background: #82afff;
+}
+
+.readerinfo {
+  display: flex;
+  flex-direction: row;
+  width: 94%;
+  margin: 40rpx auto;
+  padding-left: 35rpx;
+}
+
+.headpic {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.readername {
+  color: #222;
+  font-size: 30rpx;
+}
+
+.readerlan {
+  color: #aaa;
+}
+
+.readerlan text {
+  color: #e9ca9b;
+}
+
+.readername text {
+  color: #999;
+  font-size: 25rpx;
+}
+
+.rbox {
+  margin-left: 20rpx;
+}
+
+.time {
+  width: 220rpx;
+  height: 95rpx;
+  border: 1rpx solid #f7c679;
+  border-radius: 50rpx;
+  line-height: 95rpx;
+  padding: 0 40rpx;
+}
+
+.audioinfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-pause, .fa-play {
+  color: #eec585;
+}
+
+.fa-heart, .fa-heart-o {
+  color: #ef9191;
+}
+
+.follow {
+  width: 203rpx;
+  height: 95rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 50rpx;
+}
+
+.follow text {
+  margin-right: 10rpx;
+}
+
+.btn, .btn1, .btn2 {
+  margin: 0rpx auto 0 auto;
+  width: 638rpx;
+  height: 345rpx;
+}
+
+.btn1, .btn2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.recording {
+  width: 143rpx;
+  height: 150rpx;
+  color: #ae8e59;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  line-height: 140rpx;
+  margin: 95rpx 0 50rpx 0;
+}
+
+.careful {
+  color: #ae8e59;
+}
+
+.audition {
+  text-align: center;
+  height: 140rpx;
+}
+
+.audition text {
+  position: relative;
+  top: 50rpx;
+  font-size: 33rpx;
+  color: #ae8e59;
+}
+
+.audition view {
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border-radius: 50%;
+  line-height: 140rpx;
+}
+
+.fa-microphone, .fa-stop {
+  color: #b17b28;
+}
+
+.fa-align-left {
+  color: #f4dab2;
+}
+
+.btn .flex-center {
+  width: 185rpx;
+  height: 95rpx;
+  font-weight: 900;
+  border-radius: 50rpx;
+  font-size: 33rpx;
+  text-align: center;
+  line-height: 95rpx;
+  background: #fff;
+  color: #f4dab2;
+}
+
+.progress {
+  width: 350rpx;
+  height: 25rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 25rpx;
+  overflow: hidden;
+}
+
+.btn2 text {
+  font-size: 30rpx;
+  color: #ae8e59;
+}
+
+.inprogress {
+  background: #e4ba79;
+  border-radius-left: 20rpx;
+  height: 25rpx;
+  width: 300rpx;
+  transition: width 5s;
+}
+.inprogress_width{
+  width: 0px;
+}
+
+/* 进度条 */
+
+.circleProgress_wrapper {
+  width: 130rpx;
+  height: 150rpx;
+  margin: 0rpx auto;
+  position: relative;
+  bottom: 223rpx;
+}
+
+.wrapper {
+  width: 67rpx;
+  height: 132rpx;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.circleProgress {
+  width: 123rpx;
+  height: 123rpx;
+  border: 5rpx solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(225deg);
+}
+
+.right {
+  right: 0;
+}
+
+.rightcircle {
+  border-top: 5rpx solid #e4ba79;
+  border-right: 5rpx solid #e4ba79;
+  right: 0;
+  -webkit-animation: circleProgressLoad_right 60s linear infinite;
+}
+
+.left {
+  left: 0;
+}
+
+.leftcircle {
+  border-bottom: 5rpx solid #e4ba79;
+  border-left: 5rpx solid #e4ba79;
+  left: 0;
+  -webkit-animation: circleProgressLoad_left 60s linear infinite;
+}
+
+@-webkit-keyframes circleProgressLoad_right {
+  0% {
+    -webkit-transform: rotate(-135deg);
+  }
+
+  50%, 100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes circleProgressLoad_left {
+  0%, 50% {
+    -webkit-transform: rotate(-135deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+.region, .countDown {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.choice {
+  background: #f6dfbf;
+  color: #ae956a !important;
+}
+
+.refiontil {
+  text-align: center;
+  width: 360rpx;
+  height: 48rpx;
+  font-size: 50rpx;
+  color: #333;
+  margin: 167rpx auto 32rpx auto;
+}
+
+.list {
+  width: 180rpx;
+  height: 90rpx;
+  border: 5rpx solid #f1dfc0;
+  margin: 38rpx 25rpx 0 25rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #f1dfc0;
+  font-size: 33rpx;
+  font-weight:700;
+}
+
+swiper {
+  height: 625rpx;
+}
+
+swiper-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.null {
+  height: 100rpx;
+  width: 100%;
+}
+
+.option {
+  width: 285rpx;
+  margin: 125rpx auto 220rpx auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.option text {
+  font-size: 33rpx;
+  color: #eec585;
+}
+
+/* 弹层 */
+
+.countDown {
+  width: 100%;
+  background: #333;
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.cell {
+  width: 1em;
+  height: 1em;
+  font-size: 120rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.5em 0 0 -0.5em;
+  animation: go 3s;
+  transform-origin: left bottom;
+}
+
+.num {
+  position: absolute;
+  width: 1em;
+  color: #b17b28;
+  line-height: 1em;
+  text-align: center;
+  /* text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3); */
+  animation: run 3s steps(3);
+}
+
+@keyframes run {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -3em;
+  }
+}
+
+@keyframes go {
+  0% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(360deg) scale(0.01);
+  }
+}
+.fa-lg{
+  font-size:1.5em;
+line-height:1.5em;
+}

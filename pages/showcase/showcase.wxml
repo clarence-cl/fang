@@ -1,0 +1,44 @@
+<view class='container'>
+  <view class='content' style='background-image: url({{showcaseData.back_i_url}});'>
+    <view class='peotry'>
+      <view class='peotrytil'>{{showcaseData.poetry.title}}</view>
+      <view class='author'>- {{showcaseData.poetry.author}} -</view>
+      <view class='peotrycon'>
+        <view wx:for="{{ peotryCon}}" wx:key="{{index}}">{{item}}</view>
+      </view>
+    </view>
+    <view class='readerinfo'>
+      <image class='headpic' src='{{showcaseData.user.head_pic}}'></image>
+      <view class='rbox flex-v flex-between'>
+        <view class='readername'>
+          {{showcaseData.user.name}}
+          <text>{{showcaseData.user.detail}}</text>
+        </view>
+        <view class='readerlan'>正在使用
+          <text>{{showcaseData.province}}话</text>朗读</view>
+      </view>
+    </view>
+    <view class='audioinfo flex-h flex-around'>
+      <view class='time flex-h flex-between-center' bindtap='onplay'>
+        <!-- <view class='fa {{play?"fa-play":"fa-pause"}}'></view> -->
+        <view class='fa fa-pause' wx:if="{{!play}}"></view>
+        <image src='../../assets/images/voice.png' wx:if="{{play}}"></image>
+        <audio src="{{showcaseData.final_url}}" id="myAudio"></audio>
+        <view>{{time}}″</view>
+      </view>
+      <view class='follow flex-h flex-center' bindtap='onfollow'>
+        <text class='fa {{follow?"fa-heart":"fa-heart-o"}}'></text> {{peonum}}</view>
+    </view>
+  </view>
+  <view class='btn flex-h flex-around'>
+    <view class='flex-center' bindtap='toranking'>
+      <image src="../../assets/images/ph_full.png"></image> 排行</view>
+    <view class='flex-center' bindtap='torecording'>
+      <image src="../../assets/images/mic.png" style='height:40rpx;'></image> 挑战</view>
+    <view class='flex-center'>
+      <button hover-class="none" open-type="share">
+        <image src="../../assets/images/share_y.png"></image>分享
+        </button>
+        </view>
+  </view>
+</view>

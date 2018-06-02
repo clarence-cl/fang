@@ -1,0 +1,21 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='container'>
+<view class='banner0'></view>
+  <view class='banner' regionId="{{regionId}}" style='background-image:url("{{imgurl}}")'></view>
+  <view class='content'>
+    <view class="list history" bindtap='topeotry' wx:for="{{regionData}}" wx:key="{{index}}" data-audioid='{{item.id}}' id="{{item.poetry.id}}">
+      <text class='historyIdex'>{{index+1<10?"0"+(index+1):index+1}}.</text>
+      <image src='{{item.user.head_pic}}'></image>
+      <view class='rbox'>
+        <label>
+          <text class='peotrytitle'>{{item.poetry.title}}</text>
+          <text>{{item.poetry.author}}</text>
+        </label>
+        <view class='author'>
+          <text>{{item.col_count}}<text class='fa fa-heart-o'></text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='foot' wx:if="{{onoff}}">我也是有底线的</view>
+</view>
